@@ -182,21 +182,19 @@ function showPage() {
         <div class="row">
           <div class="col-lg-12">
             <ul id="portfolio-flters">
-              {% for product in pindex %} 
-              {% if product.product_id == 'p1' %} 
-              <li data-filter="*" class="filter-active">{{ product.product_title }}</li>
-              {% elif product.product_id == 'p2' %}
-              <li data-filter=".filter-gold">{{ product.product_title }}</li>
-              {% elif product.product_id == 'p3' %}
-              <li data-filter=".filter-Energies">{{ product.product_title }}</li>
-              {% elif product.product_id == 'p4' %}
-              <li data-filter=".filter-Currencies">{{ product.product_title }}</li>
-              {% elif product.product_id == 'p5' %}
-                <li data-filter=".filter-Indicies">{{ product.product_title }}</li>
-                {% elif product.product_id == 'p6' %}
-                <li data-filter=".filter-cotton">{{ product.product_title }}</li>
-                {% endif %}
-                {% endfor %}
+              
+              <li data-filter="*" class="filter-active">All</li>
+             
+              <li data-filter=".filter-gold">Metals</li>
+            
+              <li data-filter=".filter-Energies">Energies</li>
+          
+              <li data-filter=".filter-Currencies">Currencies</li>
+         
+                <li data-filter=".filter-Indicies">Indices</li>
+               
+                <li data-filter=".filter-cotton">Cotton</li>
+              
             </ul> 
           </div>
         </div>
@@ -206,16 +204,15 @@ function showPage() {
           <div class="col-lg-4 col-md-6 portfolio-item filter-gold wow fadeInUp">
             <div class="portfolio-wrap">
               <figure>
-                {% for sub_product in spindex %} 
-                {% if sub_product.sub_product_id == 'm1' %}
-                <img src="{{sub_product.sub_product_image.url}}" class="img-fluid" alt="">
-                <a href="{{sub_product.sub_product_image.url}}" data-lightbox="portfolio" data-title="Metal 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+          
+                <img src="{%static 'img/Gold.jpg' %}" class="img-fluid" alt="">
+                <a href="{%static 'img/Gold.jpg' %}" data-lightbox="portfolio" data-title="Metal 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
                 <!--<a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">{{ sub_product.sub_product_title }}</a></h4>
-                <p>{{ sub_product.sub_product_content }}</p>
+                <h4><a href="#">Gold</a></h4>
+                <p>Metal</p>
                 
               </div>
             </div>
@@ -226,15 +223,15 @@ function showPage() {
           <div class="col-lg-4 col-md-6 portfolio-item filter-gold wow fadeInUp" data-wow-delay="0.2s">
             <div class="portfolio-wrap">
               <figure>
-                {% elif sub_product.sub_product_id == 'm2' %}
-                <img src="{{sub_product.sub_product_image.url}}" class="img-fluid" alt="">
-                <a href="{{sub_product.sub_product_image.url}}" class="link-preview" data-lightbox="portfolio" data-title="Metal 2" title="Preview"><i class="ion ion-eye"></i></a>
+               
+                <img src="{%static 'img/silver.jpg' %}" class="img-fluid" alt="">
+                <a href="{%static 'img/silver.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Metal 2" title="Preview"><i class="ion ion-eye"></i></a>
                 <!--<a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">{{ sub_product.sub_product_title }}</a></h4>
-                <p>{{ sub_product.sub_product_content }}</p>
+                <h4><a href="#">Silver</a></h4>
+                <p>Metal</p>
               
               </div>
             </div>
@@ -243,17 +240,16 @@ function showPage() {
           <div class="col-lg-4 col-md-6 portfolio-item filter-gold wow fadeInUp" data-wow-delay="0.2s">
             <div class="portfolio-wrap">
               <figure>
-                {% elif sub_product.sub_product_id == 'm4' %}
-                <img src="{{sub_product.sub_product_image.url}}" class="img-fluid" alt="">
-                <a href="{{sub_product.sub_product_image.url}}" class="link-preview" data-lightbox="portfolio" data-title="Metal 2" title="Preview"><i class="ion ion-eye"></i></a>
+              
+                <img src="{%static 'img/Platinum.jpg' %}" class="img-fluid" alt="">
+                <a href="{%static 'img/Platinum.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Metal 2" title="Preview"><i class="ion ion-eye"></i></a>
                 <!--<a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">{{ sub_product.sub_product_title }}</a></h4>
-                <p>{{ sub_product.sub_product_content }}</p>
-                {% endif %}
-                {% endfor %}
+                <h4><a href="#">Platinum</a></h4>
+                <p>Metal</p>
+               
               </div>
             </div>
           </div>
@@ -261,16 +257,15 @@ function showPage() {
           <div class="col-lg-4 col-md-6 portfolio-item filter-Energies wow fadeInUp">
             <div class="portfolio-wrap">
               <figure>
-                {% for sub_product in spindex %} 
-                {% if sub_product.sub_product_id == 'e1' %}
-                <img src="{{sub_product.sub_product_image.url}}" class="img-fluid" alt="">
-                <a href="{{sub_product.sub_product_image.url}}" class="link-preview" data-lightbox="portfolio" data-title="Energies 2" title="Preview"><i class="ion ion-eye"></i></a>
+            
+                <img src="{%static 'img/brent-oil.jpg' %}" class="img-fluid" alt="">
+                <a href="{%static 'img/brent-oil.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Energies 2" title="Preview"><i class="ion ion-eye"></i></a>
                 <!--<a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">{{ sub_product.sub_product_title }}</a></h4>
-                <p>{{ sub_product.sub_product_content }}</p>
+                <h4><a href="#">Brent Oil</a></h4>
+                <p>Energy</p>
                 
               </div>
             </div>
@@ -278,15 +273,15 @@ function showPage() {
    <div class="col-lg-4 col-md-6 portfolio-item filter-Indicies wow fadeInUp">
             <div class="portfolio-wrap">
               <figure>
-                {% elif sub_product.sub_product_id == 'i1' %}
-                <img src="{{sub_product.sub_product_image.url}}" class="img-fluid" alt="">
-                <a href="{{sub_product.sub_product_image.url}}" class="link-preview" data-lightbox="portfolio" data-title="Indicies 1" title="Preview"><i class="ion ion-eye"></i></a>
+                
+                <img src="{%static 'img/sp.jpg' %}" class="img-fluid" alt="">
+                <a href="{%static 'img/sp.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Indicies 1" title="Preview"><i class="ion ion-eye"></i></a>
                 <!--<a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">{{ sub_product.sub_product_title }}</a></h4>
-                <p>{{ sub_product.sub_product_content }}</p>
+                <h4><a href="#">S & P</a></h4>
+                <p>Indice</p>
                 
               </div>
             </div>
@@ -295,33 +290,32 @@ function showPage() {
            <div class="col-lg-4 col-md-6 portfolio-item filter-Indicies wow fadeInUp">
             <div class="portfolio-wrap">
               <figure>
-                {% elif sub_product.sub_product_id == 'i2' %}
-                <img src="{{sub_product.sub_product_image.url}}" class="img-fluid" alt="">
-                <a href="{{sub_product.sub_product_image.url}}" class="link-preview" data-lightbox="portfolio" data-title="Indicies 1" title="Preview"><i class="ion ion-eye"></i></a>
+               
+                <img src="{%static 'img/nsd-100.jpg' %}" class="img-fluid" alt="">
+                <a href="{%static 'img/nsd-100.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Indicies 1" title="Preview"><i class="ion ion-eye"></i></a>
                 <!--<a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">{{ sub_product.sub_product_title }}</a></h4>
-                <p>{{ sub_product.sub_product_content }}</p>
+                <h4><a href="#">Nasdaq</a></h4>
+                <p>Indice</p>
               </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-Indicies wow fadeInUp">
             <div class="portfolio-wrap">
-              <figure>
-                {% elif sub_product.sub_product_id == 'i3' %}
-                <img src="{{sub_product.sub_product_image.url}}" class="img-fluid" alt="">
-                <a href="{{sub_product.sub_product_image.url}}" class="link-preview" data-lightbox="portfolio" data-title="Indicies 1" title="Preview"><i class="ion ion-eye"></i></a>
+              <figure>i
+                
+                <img src="{%static 'img/DJIA.jpg' %}" class="img-fluid" alt="">
+                <a href="{%static 'img/DJIA.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Indicies 1" title="Preview"><i class="ion ion-eye"></i></a>
                 <!--<a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">{{ sub_product.sub_product_title }}</a></h4>
-                <p>{{ sub_product.sub_product_content }}</p>
-                {% endif %}
-                {% endfor %}
+                <h4><a href="#">DJIA</a></h4>
+                <p>Indice</p>
+                
               </div>
             </div>
           </div>
@@ -329,31 +323,30 @@ function showPage() {
           <div class="col-lg-4 col-md-6 portfolio-item filter-Currencies wow fadeInUp" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
               <figure>
-                {% for sub_product in spindex %} 
-                {% if sub_product.sub_product_id == 'c1' %}
-                <img src="{{sub_product.sub_product_image.url}}" class="img-fluid" alt="">
-                <a href="{{sub_product.sub_product_image.url}}" class="link-preview" data-lightbox="portfolio" data-title="Currencies 2" title="Preview"><i class="ion ion-eye"></i></a>
+                
+                <img src="{%static 'img/c1.jpg' %}" class="img-fluid" alt="">
+                <a href="{%static 'img/c1.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Currencies 2" title="Preview"><i class="ion ion-eye"></i></a>
                 <!--<a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">{{ sub_product.sub_product_title }}</a></h4>
-                <p>{{ sub_product.sub_product_content }}</p>
+                <h4><a href="#"USD</a></h4>
+                <p>Currency</p>
               </div>
             </div>
           </div>
    <div class="col-lg-4 col-md-6 portfolio-item filter-Currencies wow fadeInUp" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
               <figure>
-                {% elif sub_product.sub_product_id == 'c2' %}
-                <img src="{{sub_product.sub_product_image.url}}" class="img-fluid" alt="">
-                <a href="{{sub_product.sub_product_image.url}}" class="link-preview" data-lightbox="portfolio" data-title="Currencies 2" title="Preview"><i class="ion ion-eye"></i></a>
+                
+                <img src="{%static 'img/c2.jpg' %}" class="img-fluid" alt="">
+                <a href="{%static 'img/c2.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Currencies 2" title="Preview"><i class="ion ion-eye"></i></a>
                 <!--<a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">{{ sub_product.sub_product_title }}</a></h4>
-                <p>{{ sub_product.sub_product_content }}</p>
+                <h4><a href="#">JPY</a></h4>
+                <p>Currency</p>
         
               </div>
             </div>
@@ -362,15 +355,15 @@ function showPage() {
           <div class="col-lg-4 col-md-6 portfolio-item filter-Currencies wow fadeInUp" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
               <figure>
-                {% elif sub_product.sub_product_id == 'c3' %}
-                <img src="{{sub_product.sub_product_image.url}}" class="img-fluid" alt="">
-                <a href="{{sub_product.sub_product_image.url}}" class="link-preview" data-lightbox="portfolio" data-title="Currencies 2" title="Preview"><i class="ion ion-eye"></i></a>
+                
+                <img src="{%static 'img/cad.png' %}" class="img-fluid" alt="">
+                <a href="{%static 'img/cad.png' %}" class="link-preview" data-lightbox="portfolio" data-title="Currencies 2" title="Preview"><i class="ion ion-eye"></i></a>
                 <!--<a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">{{ sub_product.sub_product_title }}</a></h4>
-                <p>{{ sub_product.sub_product_content }}</p>
+                <h4><a href="#">CAD</a></h4>
+                <p>Currency</p>
                
               </div>
             </div>
@@ -379,15 +372,15 @@ function showPage() {
           <div class="col-lg-4 col-md-6 portfolio-item filter-Currencies wow fadeInUp" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
               <figure>
-                {% elif sub_product.sub_product_id == 'c4' %}
-                <img src="{{sub_product.sub_product_image.url}}" class="img-fluid" alt="">
-                <a href="{{sub_product.sub_product_image.url}}" class="link-preview" data-lightbox="portfolio" data-title="Currencies 2" title="Preview"><i class="ion ion-eye"></i></a>
+             
+                <img src="{%static 'img/chf.png' %}" class="img-fluid" alt="">
+                <a href="{%static 'img/chf.png' %}" class="link-preview" data-lightbox="portfolio" data-title="Currencies 2" title="Preview"><i class="ion ion-eye"></i></a>
                 <!--<a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">{{ sub_product.sub_product_title }}</a></h4>
-                <p>{{ sub_product.sub_product_content }}</p>
+                <h4><a href="#">CHF</a></h4>
+                <p>Currency</p>
                 
               </div>
             </div>
@@ -396,15 +389,15 @@ function showPage() {
           <div class="col-lg-4 col-md-6 portfolio-item filter-Currencies wow fadeInUp" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
               <figure>
-                {% elif sub_product.sub_product_id == 'c5' %}
-                <img src="{{sub_product.sub_product_image.url}}" class="img-fluid" alt="">
-                <a href="{{sub_product.sub_product_image.url}}" class="link-preview" data-lightbox="portfolio" data-title="Currencies 2" title="Preview"><i class="ion ion-eye"></i></a>
+       
+                <img src="{%static 'img/euro.png' %}" class="img-fluid" alt="">
+                <a href="{%static 'img/euro.png' %}" class="link-preview" data-lightbox="portfolio" data-title="Currencies 2" title="Preview"><i class="ion ion-eye"></i></a>
                 <!--<a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">{{ sub_product.sub_product_title }}</a></h4>
-                <p>{{ sub_product.sub_product_content }}</p>
+                <h4><a href="#">EUR</a></h4>
+                <p>Currency</p>
                 
               </div>
             </div>
@@ -413,15 +406,15 @@ function showPage() {
           <div class="col-lg-4 col-md-6 portfolio-item filter-Currencies wow fadeInUp" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
               <figure>
-                {% elif sub_product.sub_product_id == 'c6' %}
-                <img src="{{sub_product.sub_product_image.url}}" class="img-fluid" alt="">
-                <a href="{{sub_product.sub_product_image.url}}" class="link-preview" data-lightbox="portfolio" data-title="Currencies 2" title="Preview"><i class="ion ion-eye"></i></a>
+               
+                <img src="{%static 'img/gbp.png' %}" class="img-fluid" alt="">
+                <a href="{%static 'img/gbp.png' %}" class="link-preview" data-lightbox="portfolio" data-title="Currencies 2" title="Preview"><i class="ion ion-eye"></i></a>
                 <!--<a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">{{ sub_product.sub_product_title }}</a></h4>
-                <p>{{ sub_product.sub_product_content }}</p>
+                <h4><a href="#">GBP</a></h4>
+                <p>Currency</p>
                 
               </div>
             </div>
@@ -430,17 +423,16 @@ function showPage() {
           <div class="col-lg-4 col-md-6 portfolio-item filter-Currencies wow fadeInUp" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
               <figure>
-                {% elif sub_product.sub_product_id == 'c7' %}
-                <img src="{{sub_product.sub_product_image.url}}" class="img-fluid" alt="">
-                <a href="{{sub_product.sub_product_image.url}}" class="link-preview" data-lightbox="portfolio" data-title="Currencies 2" title="Preview"><i class="ion ion-eye"></i></a>
+    
+                <img src="{%static 'img/aud.png' %}" class="img-fluid" alt="">
+                <a href="{%static 'img/aud.png' %}" class="link-preview" data-lightbox="portfolio" data-title="Currencies 2" title="Preview"><i class="ion ion-eye"></i></a>
                 <!--<a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">{{ sub_product.sub_product_title }}</a></h4>
-                <p>{{ sub_product.sub_product_content }}</p>
-                {% endif %}
-                {% endfor %}
+                <h4><a href="#">AUD</a></h4>
+                <p>Currency</p>
+                
               </div>
             </div>
           </div>
@@ -449,18 +441,16 @@ function showPage() {
           <div class="col-lg-4 col-md-6 portfolio-item filter-gold wow fadeInUp" data-wow-delay="0.2s">
             <div class="portfolio-wrap">
               <figure>
-                {% for sub_product in spindex %} 
-                {% if sub_product.sub_product_id == 'm3' %}
-                <img src="{{sub_product.sub_product_image.url}}" class="img-fluid" alt="">
-                <a href="{{sub_product.sub_product_image.url}}" class="link-preview" data-lightbox="portfolio" data-title="Metal 3" title="Preview"><i class="ion ion-eye"></i></a>
+              
+                <img src="{%static 'img/copper.png' %}" class="img-fluid" alt="">
+                <a href="{%static 'img/copper.png' %}" class="link-preview" data-lightbox="portfolio" data-title="Metal 3" title="Preview"><i class="ion ion-eye"></i></a>
                 <!--<a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">{{ sub_product.sub_product_title }}</a></h4>
-                <p>{{ sub_product.sub_product_content }}</p>
-                {% endif %}
-                {% endfor %}
+                <h4><a href="#">copper</a></h4>
+                <p>Metal</p>
+                
               </div>
             </div>
           </div>
@@ -468,16 +458,15 @@ function showPage() {
           <div class="col-lg-4 col-md-6 portfolio-item filter-Energies wow fadeInUp">
             <div class="portfolio-wrap">
               <figure>
-                {% for sub_product in spindex %} 
-                {% if sub_product.sub_product_id == 'e2' %}
-                <img src="{{sub_product.sub_product_image.url}}" class="img-fluid" alt="">
-                <a href="{{sub_product.sub_product_image.url}}" class="link-preview" data-lightbox="portfolio" data-title="Energies 1" title="Preview"><i class="ion ion-eye"></i></a>
+                
+                <img src="{%static 'img/crude-oil.jpg' %}" class="img-fluid" alt="">
+                <a href="{%static 'img/crude-oil.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Energies 1" title="Preview"><i class="ion ion-eye"></i></a>
                 <!--<a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">{{ sub_product.sub_product_title }}</a></h4>
-                <p>{{ sub_product.sub_product_content }}</p>
+                <h4><a href="#">Crude Oil</a></h4>
+                <p>Energy</p>
               </div>
             </div>
           </div>
@@ -485,17 +474,16 @@ function showPage() {
           <div class="col-lg-4 col-md-6 portfolio-item filter-Energies wow fadeInUp" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
               <figure>
-                {% elif sub_product.sub_product_id == 'e3' %}
-                <img src="{{sub_product.sub_product_image.url}}" class="img-fluid" alt="">
-                <a href="{{sub_product.sub_product_image.url}}" class="link-preview" data-lightbox="portfolio" data-title="Energies 3" title="Preview"><i class="ion ion-eye"></i></a>
+         
+                <img src="{%static 'img/natural-gas.jpg' %}" class="img-fluid" alt="">
+                <a href="{%static 'img/natural-gas.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Energies 3" title="Preview"><i class="ion ion-eye"></i></a>
                 <!--<a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">{{ sub_product.sub_product_title }}</a></h4>
-                <p>{{ sub_product.sub_product_content }}</p>
-                {% endif %}
-                {% endfor %}
+                <h4><a href="#">Natural Gas</a></h4>
+                <p>Energy</p>
+                
               </div>
             </div>
           </div>
@@ -503,18 +491,16 @@ function showPage() {
        <div class="col-lg-4 col-md-6 portfolio-item filter-cotton wow fadeInUp" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
               <figure>
-                {% for sub_product in spindex %} 
-                {% if sub_product.sub_product_id == 'co1' %}
-                <img src="{{sub_product.sub_product_image.url}}" class="img-fluid" alt="">
-                <a href="{{sub_product.sub_product_image.url}}" class="link-preview" data-lightbox="portfolio" data-title="Energies 3" title="Preview"><i class="ion ion-eye"></i></a>
+              
+                <img src="{%static 'img/cotton.jpg' %}" class="img-fluid" alt="">
+                <a href="{%static 'img/cotton.jpg' %}" class="link-preview" data-lightbox="portfolio" data-title="Energies 3" title="Preview"><i class="ion ion-eye"></i></a>
                 <!--<a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>-->
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="#">{{ sub_product.sub_product_title }}</a></h4>
-                <p>{{ sub_product.sub_product_content }}</p>
-                {% endif %}
-                {% endfor %}
+                <h4><a href="#">Cotton</a></h4>
+                <p>Cotton</p>
+                
               </div>
             </div>
           </div>

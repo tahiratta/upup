@@ -11,10 +11,10 @@
 
           <div class="carousel-item active">
             <div class="" > 
-              {% for vslider in vslindex %}
+              
       <video autoplay loop width="100%" max-height=auto> 
         
-  <source src="{{ vslider.vslider_video.url }}" type="video/mp4">
+  <source src="{%static 'img/video1.mp4' %}" type="video/mp4">
         
 </video>
       
@@ -23,62 +23,60 @@
             <div class="carousel-container">
               <div class="carousel-content">
 
-                <h2>{{ vslider.vslider_title }}</h2>
-                <p>{{ vslider.vslider_description }}</p>
+                <h2>DMC Markets Pvt Ltd</h2>
+                <p>Corporate Member of Pakistan Mercantile Exchange</p>
                 <a href="#services" class="btn-get-started scrollto">Get Started</a>
-                {% endfor %}
+     
               </div>
             </div>
           </div>
 
           <div class="carousel-item ">
-            {% for islider in islindex %}
-            {% if islider.islider_id == 'is1' %}
-            <div class="carousel-background"><img src="{{ islider.islider_image.url }}" alt=""></div>
+          
+            <div class="carousel-background"><img src="{%static 'img/1.jpg' %}" alt=""></div>
             
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>{{ islider.islider_title }}</h2>
-                <p> {{ islider.islider_description }}</p>
+                <h2>Services</h2>
+                <p> DMC Markets Provides Customer Education And Training Guides</p>
                 <a href="#services" class="btn-get-started scrollto">Get Started</a>
               </div>
             </div>
           </div>
 
           <div class="carousel-item">
-            {% elif islider.islider_id == 'is2' %}
-            <div class="carousel-background"><img src="{{ islider.islider_image.url }}" alt=""></div>
+            
+            <div class="carousel-background"><img src="{%static 'img/2.jpg' %}" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>{{ islider.islider_title }}</h2>
-                <p> {{ islider.islider_description }}</p>
+                <h2>Products</h2>
+                <p> Metals Energies Currencies Indices Cotton</p>
                 <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
               </div>
             </div>
           </div>
 
           <div class="carousel-item">
-            {% elif islider.islider_id == 'is3' %}
-            <div class="carousel-background"><img src="{{ islider.islider_image.url }}" alt=""></div>
+            
+            <div class="carousel-background"><img src="{%static 'img/2.jpg' %}" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>{{ islider.islider_title }}</h2>
-                <p> {{ islider.islider_description }}</p>
+                <h2>PMEX</h2>
+                <p> Pakistan Mercantile Exchange</p>
                 <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
               </div>
             </div>
           </div>
 
           <div class="carousel-item">
-            {% elif islider.islider_id == 'is4' %}
-            <div class="carousel-background"><img src="{{ islider.islider_image.url }}" alt=""></div>
+          
+            <div class="carousel-background"><img src="{%static 'img/3.jpg' %}" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>{{ islider.islider_title }}</h2>
-                <p> {{ islider.islider_description }}</p>
+                <h2>Stories</h2>
+                <p> Your Growth Our Success</p>
                 <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
-                {% endif %}
-                {% endfor %}
+               
               </div>
             </div>
           </div>

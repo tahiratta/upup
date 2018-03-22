@@ -27,8 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['192.168.100.8', 'localhost', '127.0.0.1', 'dmcmarket.herokuapp.com']
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
 )
 
 # Application definition

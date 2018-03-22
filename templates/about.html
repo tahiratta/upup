@@ -8,11 +8,10 @@
 <br/>
 <br/>
 <section id="about">
-      <div class="container">
-        {% for about in abindex %}  
+      <div class="container">  
         <header class="section-header">
-          <h3>{{ about.about_title }}</h3>
-          <p>{{ about.about_content }}</p>
+          <h3>About Us</h3>
+          <p>DMC MARKETS, a licensed, Corporate Member of Pakistan Mercantile Exchange. We have always followed a client centric approach and placed our clients needs at the center of our operations. It is our aim to remain among the best online brokers in Pakistan and to retain our reputation as a most reliable and trusted broker. At DMC, we are dedicated to providing our clients with the latest in trading technology and tools through continuous investments in innovation. In addition to new instruments, we regularly update our offering with new platforms and services to meet the varying needs of traders, while honoring our commitment to transparency and fair trading practices. We also offer comprehensive educational material, to help traders learn about online trading and the financial markets. Our award-winning customer support team is on hand, 24/5, to assist with any issues you may encounter or questions you may have.</p>
         </header>
 
         <div class="row about-cols">
@@ -20,11 +19,11 @@
           <div class="col-md-4 wow fadeInUp">
             <div class="about-col"> 
               <div class="img">
-                <img src="{{about.mission_image.url}}" alt="" class="img-fluid">
+                <img src="{%static 'img/ourMission.jpg' %}" alt="" class="img-fluid">
                 <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
               </div>
               <h2 class="title"><a href="#"></a></h2>
-              <p>{{ about.mission_content }}
+              <p>“Making investment easier and smarter, By always putting the Clients and their financial well-being first. By understanding and catering to the unique needs of each Clientele. By reducing systemic risk in an efficient and compliant manner while generating positive returns. By being a ‘best practices’ brokerage house for our Clientele, our Employees and our Market.”
               </p>
             </div>
           </div>
@@ -32,11 +31,11 @@
           <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
             <div class="about-col">
               <div class="img">
-                <img src="{{about.value_image.url}}" alt="" class="img-fluid">
+                <img src="{%static 'img/ourValues.jpg' %}" alt="" class="img-fluid">
                 <div class="icon"><i class="ion-ios-list-outline"></i></div>
               </div>
               <h2 class="title"><a href="#"></a></h2>
-              <p>{{ about.value_content }}
+              <p>“Respect for our Clients. Integrity in Both Thought and Action. Teamwork Supported by Sound Investment Strategies. Strong Commitment to Excellence. Our values represent the core of our beliefs in term of how we want to operate. We deliver the services they need and look ahead to assess, evaluate and educate our clients on the impacts of potential opportunities or changes.”
               </p>
             </div>
           </div>
@@ -44,18 +43,18 @@
           <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
             <div class="about-col">
               <div class="img">
-                <img src="{{about.vision_image.url}}" alt="" class="img-fluid">
+                <img src="{%static 'img/ourVision.jpg' %}" alt="" class="img-fluid">
                 <div class="icon"><i class="ion-ios-eye-outline"></i></div>
               </div>
               <h2 class="title"><a href="#"></a></h2>
               <p>
-                {{ about.vision_content }}
+                “Our vision is to build sustainably the finest and largest locally-owned, diversified insurance broking & services company in Pakistan, to use that strong market presence for the betterment of our clients, whilst demonstrating and earning a reputation for good ethics and a trusted service, which emanate from a workplace which is both enjoyable and career-enhancing”
               </p>
             </div>
           </div>
 
         </div>
-        {% endfor %}
+       
       </div>
     </section><!-- #about -->
     {% include "footer.html" %}

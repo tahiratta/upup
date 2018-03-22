@@ -55,138 +55,128 @@
       <nav id="nav-menu-container">
   
         <ul class="nav-menu"> 
-
   <br/>
-         {% for menu in mindex %} 
-          {% if menu.menu_id == 'mi1' %} 
-          <li class="menu-active"><a href="{% url 'index' %}">{{ menu.menu_title }}</a></li>
-          {% elif menu.menu_id == 'mi2' %}
-                <li class="menu-has-children" ><a href="{% url 'products' %}">{{ menu.menu_title }}</a>
+          <li class="menu-active"><a href="{% url 'index' %}">Home</a></li>
+          
+                <li class="menu-has-children" ><a href="{% url 'products' %}">Products</a>
             <ul>
-              {% for sub_menu in smindex %}
-              {% if sub_menu.sub_menu_id == 'smi1' %}
-              <li class="menu-has-children" ><a >{{ sub_menu.sub_menu_title }}</a>
+             
+              <li class="menu-has-children" ><a >Metals</a>
 <ul>
-              {% for sub_of_sub_menu in ssmindex %}
-              {% if sub_of_sub_menu.sub_of_sub_menu_id == 'm1' %}
-              <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a></li>
-              {% elif sub_of_sub_menu.sub_of_sub_menu_id == 'm2' %}
-               <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a>  </li>
-              {% elif sub_of_sub_menu.sub_of_sub_menu_id == 'm3' %} 
-                <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a></li>
-              {% elif sub_of_sub_menu.sub_of_sub_menu_id == 'm4' %} 
-                <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a></li>  
-              {% endif %}
-              {% endfor %}
-
+              
+              <li class="menu-has-children"><a href="#">Gold</a></li>
+              
+               <li class="menu-has-children"><a href="#">Silver</a>  </li>
+              
+                <li class="menu-has-children"><a href="#">Platinum</a></li>
+               
+                <li class="menu-has-children"><a href="#">Copper</a></li>  
+             
 </ul>
               </li>
-              {% elif sub_menu.sub_menu_id == 'smi2' %}
-              <li ><a href="#intro">{{ sub_menu.sub_menu_title }}</a>
-                 <ul>
-              {% for sub_of_sub_menu in ssmindex %}
-              {% if sub_of_sub_menu.sub_of_sub_menu_id == 'e1' %}
-              <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a></li>
-              {% elif sub_of_sub_menu.sub_of_sub_menu_id == 'e2' %}
-               <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a>  </li>
-              {% elif sub_of_sub_menu.sub_of_sub_menu_id == 'e3' %} 
-                <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a></li>
 
-              {% endif %}
-              {% endfor %}
-</ul>
-              </li>
-              {% elif sub_menu.sub_menu_id == 'smi3' %}
-              <li ><a href="#intro">{{ sub_menu.sub_menu_title }}</a>
+              
+              <li ><a href="#intro">Energies</a>
                 <ul>
-              {% for sub_of_sub_menu in ssmindex %}
-              {% if sub_of_sub_menu.sub_of_sub_menu_id == 'c1' %}
-              <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a></li>
-              {% elif sub_of_sub_menu.sub_of_sub_menu_id == 'c2' %}
-               <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a>  </li>
-              {% elif sub_of_sub_menu.sub_of_sub_menu_id == 'c3' %} 
-                <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a></li>
-              {% elif sub_of_sub_menu.sub_of_sub_menu_id == 'c4' %} 
-                <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a></li>
-                 {% elif sub_of_sub_menu.sub_of_sub_menu_id == 'c5' %}
-               <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a>  </li>
-              {% elif sub_of_sub_menu.sub_of_sub_menu_id == 'c6' %} 
-                <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a></li>
-              {% elif sub_of_sub_menu.sub_of_sub_menu_id == 'c7' %} 
-                <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a></li>
-                 {% elif sub_of_sub_menu.sub_of_sub_menu_id == 'c8' %}
-               <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a>  </li>
-              {% elif sub_of_sub_menu.sub_of_sub_menu_id == 'c9' %} 
-                <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a></li>
-              {% elif sub_of_sub_menu.sub_of_sub_menu_id == 'c10' %} 
-                <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a></li>
-                 {% elif sub_of_sub_menu.sub_of_sub_menu_id == 'c11' %}
-               <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a>  </li>
-              {% elif sub_of_sub_menu.sub_of_sub_menu_id == 'c12' %} 
-                <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a></li>
-              {% elif sub_of_sub_menu.sub_of_sub_menu_id == 'c13' %} 
-                <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a></li>
-                 {% elif sub_of_sub_menu.sub_of_sub_menu_id == 'c14' %}
-               <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a>  </li>
-              {% elif sub_of_sub_menu.sub_of_sub_menu_id == 'c15' %} 
-                <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a></li>
-              {% elif sub_of_sub_menu.sub_of_sub_menu_id == 'c16' %} 
-                <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a></li>
+              
+              <li class="menu-has-children"><a href="#">Crude Oil</a></li>
+              
+               <li class="menu-has-children"><a href="#">Brent Oil</a>  </li>
+              
+                <li class="menu-has-children"><a href="#">Natural Gas</a></li>
+
+             }
+</ul>
+              </li>
+              
+           
+              <li ><a href="#intro">Currencies</a>
+                <ul>
+              
+              
+              <li class="menu-has-children"><a href="#">EUR/USD</a></li>
+              
+               <li class="menu-has-children"><a href="#">GBP/USD</a>  </li>
+               
+                <li class="menu-has-children"><a href="#">USD/JPY</a></li>
+               
+                <li class="menu-has-children"><a href="#">USD/CHF</a></li>
+                
+               <li class="menu-has-children"><a href="#">USD/CAD</a>  </li>
+            
+                <li class="menu-has-children"><a href="#">AUD/USD</a></li>
+              
+                <li class="menu-has-children"><a href="#">EUR/GBP</a></li>
+                 
+               <li class="menu-has-children"><a href="#">EUR/JPY</a>  </li>
+             
+                <li class="menu-has-children"><a href="#">GBP/JPY</a></li>
+               
+                <li class="menu-has-children"><a href="#">CHF/JPY</a></li>
+                 
+               <li class="menu-has-children"><a href="#">AUD/JPY</a>  </li>
+              
+                <li class="menu-has-children"><a href="#">EUR/CAD</a></li>
+              
+                <li class="menu-has-children"><a href="#">EUR/AUD</a></li>
+                 
+               <li class="menu-has-children"><a href="#">EUR/CHF</a>  </li>
+              
+                <li class="menu-has-children"><a href="#">GBP/CHF</a></li>
+              
+                <li class="menu-has-children"><a href="#">AUD/CAD</a></li>
    
-              {% endif %}
-              {% endfor %}
+              
 </ul>
               </li>
-              {% elif sub_menu.sub_menu_id == 'smi4' %}
-              <li ><a href="#intro">{{ sub_menu.sub_menu_title }}</a>
-                 <ul>
-              {% for sub_of_sub_menu in ssmindex %}
-              {% if sub_of_sub_menu.sub_of_sub_menu_id == 'i1' %}
-              <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a></li>
-              {% elif sub_of_sub_menu.sub_of_sub_menu_id == 'i2' %}
-               <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a>  </li>
-              {% elif sub_of_sub_menu.sub_of_sub_menu_id == 'i3' %} 
-                <li class="menu-has-children"><a href="#">{{ sub_of_sub_menu.sub_of_sub_menu_title }}</a></li>
+              
+              
+              <li ><a href="#intro">Indices</a>
+                <ul>
+          
+              <li class="menu-has-children"><a href="#">S & P</a></li>
+            
+               <li class="menu-has-children"><a href="#">NASDAQ</a>  </li>
+              
+                <li class="menu-has-children"><a href="#">DJIA</a></li>
 
-              {% endif %}
-              {% endfor %}
+           
 </ul>
               </li>
-              {% elif sub_menu.sub_menu_id == 'smi5' %}
-               <li ><a href="#intro">{{ sub_menu.sub_menu_title }}</a></li>  
+              
+       
+               <li ><a href="#intro">Cotton</a>
+               </li>  
 
-              {% endif %}
-              {% endfor %}
+           
             </ul>
           </li>
-          {% elif menu.menu_id == 'mi3' %}
-          <li><a href="{% url 'services' %}">{{ menu.menu_title }}</a>
+
+          <li><a href="#">PMEX Forms</a>
             <ul>
-              {% for sub_menu in smindex %}
-              {% if sub_menu.sub_menu_id == 'smi6' %}
-              <li class="menu-has-children" ><a href="{% static 'files/PMEXFORM.pdf' %}" >{{ sub_menu.sub_menu_title }}</a>
-                {% elif sub_menu.sub_menu_id == 'smi7' %}
-                <li class="menu-has-children" ><a href="{% static 'files/CommissionSheet.pdf' %}" >{{ sub_menu.sub_menu_title }}</a>
-              {% endif %}
-              {% endfor %}
-              </ul>
+              
+              <li class="menu-has-children" ><a href="{% static 'files/PMEXFORM.pdf' %}" >PMEX Forms</a>
+                
+                <li class="menu-has-children" ><a href="{% static 'files/CommissionSheet.pdf' %}" >Commission Sheet</a>
+                            </ul>
        </li>
-            {% elif menu.menu_id == 'mi4' %}
-             <li><a href="{% url 'about' %}">{{ menu.menu_title }}</a></li>
-             {% elif menu.menu_id == 'mi5' %}
-          <li><a href="{% url 'certificate' %}">{{ menu.menu_title }}</a></li
-            {% elif menu.menu_id == 'mi6' %}>
-          <li><a href="{% url 'services' %}">{{ menu.menu_title }}</a></li>
+            
+             <li><a href="{% url 'about' %}">About Us</a></li>
+           
+          <li><a href="{% url 'certificate' %}">Certificate</a></li>
+           
+          <li><a href="{% url 'services' %}">Services</a></li>
     
-          {% elif menu.menu_id == 'mi7' %}
-          <li><a href="{% url 'contact' %}">{{ menu.menu_title }}</a></li>
-          {% else %}    
-          <li><a href="{% url 'careers' %}">{{ menu.menu_title }}</a></li>
-          {% endif %}
-          {% endfor %}
+     
+          <li><a href="{% url 'contact' %}">Contact Us</a></li>
+ 
+          <li><a href="{% url 'careers' %}">Careers</a></li>
+         
         </ul>
+
       </nav><!-- #nav-menu-container -->
     </div>
+
   </header><!-- #header -->
 
   
